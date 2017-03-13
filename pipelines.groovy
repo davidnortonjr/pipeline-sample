@@ -2,6 +2,7 @@
   pipelineJob(projectName) {
     definition {
       cps {
+        script("""
         node {
             stage('Dev') {
                 milestone 1
@@ -24,6 +25,7 @@
                 sh "echo Production"
             }
         }
+      """
       }
     }
   }
